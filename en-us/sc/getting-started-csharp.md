@@ -87,6 +87,15 @@ Once you create a project, it will automatically generate a C# file, the default
 
 Everything is now ready to add the entry method that defines the smart contract:
 
+//This is what we see today - we no longer see the FunctionCode example below.
+public class Contract1: Framework.SmartContract
+{
+    public static void Main ()// Note that the main method to capitalize
+    {
+        
+    }
+}
+
 ```c#
 public class Contract1: FunctionCode
 {
@@ -95,7 +104,11 @@ public class Contract1: FunctionCode
         
     }
 }
+
+Either ways, the intrerface FunctionCode or Framework.SmartContract are not recognized by the compiler, and it fails. This needs a FIX.
 ```
+
+It doesn't work today, but if it did, you will succeed compiling. 
 
 After you compiled it successfully, you will see` SmartContract1.avm` in the `bin/Debug` directory, which is the file that is generated as the NEO smart contract.
 
